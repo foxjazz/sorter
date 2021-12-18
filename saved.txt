@@ -1,0 +1,18 @@
+,
+     "vim.normalModeKeyBindings": [
+        {
+            "before": ["r"],
+            "after": ["j"]
+        },
+         {
+            "before": ["w"],
+            "after": ["k"]
+        }, {
+            "before": ["a"],
+            "after": ["h"]
+        }, {
+            "before": ["s"],
+            "after": ["l"]
+        }
+        
+    ]
