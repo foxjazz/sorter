@@ -4,6 +4,8 @@ use std::io::Write;
 mod sorter;
 
     pub fn start() {
+        
+         
         loop {
             out("sort>");
             let s = readln();
@@ -51,7 +53,17 @@ mod sorter;
     }
 
     fn help() {
-        out("Commands are: feed, help, q");
+        let data = "{
+            first: string;
+            second: boolean;   third: number;
+         forth: Date;   fith: boolean;
+            sixth: string;
+            seventh: string;
+            eight: string;
+         }\r\n";
+        out("Commands are: feed, help, q   (feed example: \r\n" );
+        out("feed reqyires a starting { and an ending } giving this example: \r\n");
+        out(data);
     }
     
     fn readln() -> String {
