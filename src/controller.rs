@@ -5,14 +5,19 @@ mod sorter;
 
     pub fn start() {
         
-         
-        loop {
+         let mut delim = ";".to_string();
+         loop {
             out("sort>");
             let s = readln();
             match s.as_str() {
                 "feed" => {
                     let str = feed();
-                    sorter::sort(&str);
+                    sorter::sort(&str, &delim);
+
+                },
+                "delim" => {
+                    let d = readln();
+                    delim = d.to_string();
 
                 },
                 "q" => {
@@ -61,7 +66,7 @@ mod sorter;
             seventh: string;
             eight: string;
          }\r\n";
-        out("Commands are: feed, help, q   (feed example: \r\n" );
+        out("Commands are: feed,delim : sets the delimeter , help, q   (feed example: \r\n" );
         out("feed reqyires a starting { and an ending } giving this example: \r\n");
         out(data);
     }
